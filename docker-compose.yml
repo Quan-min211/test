@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  # Đặt tên cho service của bạn, ví dụ: 'my-app'
+  my-app:
+    # Docker Compose sẽ build image từ Dockerfile trong thư mục hiện tại (.)
+    build: .
+    
+    # Đặt tên cho container để dễ quản lý
+    container_name: my_java_webapp
+    
+    # Ánh xạ (map) port
+    # Cú pháp: "[PORT_TRÊN_MÁY_BẠN]:[PORT_BÊN_TRONG_CONTAINER]"
+    # Tomcat mặc định chạy ở port 8080 bên trong container.
+    # Dòng dưới đây sẽ map port 8088 trên máy bạn vào port 8080 của container.
+    # Bạn có thể truy cập ứng dụng qua http://localhost:8088
+    ports:
+      - "8085:8080"
+      
+    # Tự động khởi động lại container trừ khi bạn chủ động dừng nó
+    restart: unless-stopped
