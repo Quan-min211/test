@@ -1,0 +1,154 @@
+/* Cài đặt chung và font chữ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 1.5em;
+    /* HIỆU ỨNG NỀN GRADIENT XANH LÁ PASTEL */
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* KHUNG CHÍNH BAO BỌC NỘI DUNG */
+.container {
+    background-color: white;
+    padding: 2em 3em;
+    border-radius: 15px; /* Bo góc nhiều hơn */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    /* HIỆU ỨNG FADE-IN KHI TẢI TRANG */
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào khung */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LOGO */
+.logo {
+    max-width: 180px;
+    margin-bottom: 1.5em;
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi di chuột */
+}
+
+h1 {
+    font-size: 2em;
+    color: #006400; /* MÀU XANH LÁ ĐẬM */
+    margin-bottom: 0.8em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* FORM */
+form {
+    text-align: left;
+    margin-top: 2em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600; /* Đậm hơn */
+    color: #333;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bo góc input */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #28a745; /* MÀU XANH LÁ KHI FOCUS */
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+    outline: none;
+}
+
+/* NÚT SUBMIT CHÍNH */
+input[type="submit"] {
+    width: 100%;
+    background-image: linear-gradient(to right, #28a745, #218838);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-image: linear-gradient(to right, #218838, #1e7e34);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* KHUNG HIỂN THỊ THÔNG TIN TRANG THANKS.JSP */
+.info-display {
+    text-align: left;
+    background-color: #f4f8f5;
+    border-left: 5px solid #28a745; /* MÀU XANH LÁ */
+    padding: 1.5em 2em;
+    margin: 2em 0;
+    border-radius: 8px;
+}
+
+.info-display p {
+    margin: 0.8em 0;
+}
+
+.info-display strong {
+    color: #333;
+}
+
+.info-display span {
+    color: #006400; /* MÀU XANH LÁ ĐẬM */
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 2.5em;
+    font-size: 0.9em;
+    color: #888;
+}

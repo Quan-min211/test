@@ -1,0 +1,9 @@
+services:
+  app:
+    # Build image từ Dockerfile trong thư mục hiện tại (.)
+    build: .
+    # Đặt tên cho container để dễ quản lý
+    container_name: my-java-app-container
+    # Ánh xạ cổng 8080 trên máy của bạn vào cổng 8080 của container
+    ports:
+      - "8080:8080"
